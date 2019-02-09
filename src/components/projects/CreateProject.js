@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createProject } from '../../store/actions/projectActions'
-import {Redirect} from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
 
 class CreateProject extends Component {
   state = {
     title: '',
     begindate: '',
-    enddate:''
+    enddate: ''
 
   }
   handleChange = (e) => {
@@ -25,7 +25,7 @@ class CreateProject extends Component {
   // redirect waardoor die beschermd wordt en je niet zomaar op de abo pagina kan of de dashboard
   render() {
     const { auth } = this.props;
-    if (!auth.uid) return <Redirect to='/signin' /> 
+    if (!auth.uid) return <Redirect to='/signin' />
     return (
       <div className="container">
         <form className="white" onSubmit={this.handleSubmit}>
@@ -35,15 +35,15 @@ class CreateProject extends Component {
             <label htmlFor="title">Add Todo</label>
           </div>
           <div className="input-field">
-            <input id="begindate" type="date" className="materialize-textarea" onChange={this.handleChange} required/>
+            <input id="begindate" type="date" className="materialize-textarea" onChange={this.handleChange} required />
             <label htmlFor="content">Starting Date</label>
           </div>
           <div className="input-field">
-            <input id="enddate" type="date" className="materialize-textarea" onChange={this.handleChange} required/>
+            <input id="enddate" type="date" className="materialize-textarea" onChange={this.handleChange} required />
             <label htmlFor="content">End Date</label>
           </div>
           <div className="input-field">
-            <button class="button">Create</button>
+            <button className="button">Create</button>
           </div>
         </form>
       </div>

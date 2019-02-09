@@ -49,3 +49,19 @@ button {
   margin: 3px 3px;
   cursor: pointer;
 }
+.aset {
+  background-color: #29B6F6; /* Green */
+  border: none;
+  color: white !important;
+  padding: 14px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 3px;
+  cursor: pointer;
+}
+a:hover{
+  color: white !important;
+
+}
